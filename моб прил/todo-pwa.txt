@@ -1,0 +1,6 @@
+todo-pwa/  
+├── index.html      # Основная страница  
+├── styles.css      # Стили  
+├── app.js          # Логика приложения  
+├── manifest.json   # Настройки PWA  
+└── sw.js           # Service Worker (для оффлайн-режима)  

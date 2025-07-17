@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой список дел</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 Мои задачи</h1>
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Добавить задачу..." required>
+      <button type="submit">+</button>
+    </form>
+    <ul id="task-list"></ul>
+  </div>
+  <script src="app.js"></script>
+  <script>
+    // Регистрируем Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker работает!'))
+        .catch(err => console.log('Ошибка:', err));
+    }
+  </script>
+</body>
+</html>
